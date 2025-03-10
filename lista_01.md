@@ -28,13 +28,15 @@ console.log(y);
 let y = 10;
 ```
 
-a) A saída será undefined seguido de erro
+a) A saída será undefined seguido de erro [X]
 
 b) A saída será 5 seguido de 10
 
 c) A saída será undefined seguido de undefined
 
 d) A saída será erro em ambas as linhas que utilizam console.log
+
+Solução: A variável `x` é declarada com `var`, o que faz com que ela seja elevada para o topo do escopo, mas não inicializada. Portanto, a primeira saída será `undefined`. A variável `y` é declarada com `let`, o que não permite a elevação da variável para o topo do escopo, e por isso a segunda saída gera um erro.
 
 **2) O seguinte código JavaScript tem um erro que impede sua execução correta. Analise e indique a opção que melhor corrige o problema. Justifique sua resposta.**
 
@@ -54,7 +56,9 @@ b) Substituir if (a || b === 0) por if (a === 0 && b === 0)
 
 c) Substituir if (a || b === 0) por if (a && b === 0)
 
-d) Remover completamente a verificação if (a || b === 0)
+d) Remover completamente a verificação if (a || b === 0) [X]
+
+Solução: Uma resposta completa a esse problema requer mais contexto sobre o escopo em que a função está inserida. Caso a soma utilizando o número zero for algo inválido no escopo do que se está querendo alcançar, a verificação `if (a || b === 0)` deve ser substituída por `if (a === 0 || b === 0)`. Porém, tomando como escopo a consideração de que a função soma possui apenas como objetivo somar dois números, o ato de somar o número zero não trás nenhum caso de número inválido, assim tornando a remoção completa do `if` a melhor opção.
 
 ---
 
@@ -85,11 +89,13 @@ console.log(calcularPreco("eletrônico"));
 
 a) O código imprime 1000.
 
-b) O código imprime 200.
+b) O código imprime 200. [X]
 
 c) O código imprime 50.
 
 d) O código gera um erro.
+
+Solucão: O código imprime 200. O erro está na falta de `break` após o `case "eletrônico"`. Sem o `break`, o código continua a execução e atribui o valor 200 à variável `preco`, que é o valor do `case "vestuário"`. O `break` é necessário para interromper a execução do `switch` após a atribuição correta do valor.
 
 ---
 
@@ -112,7 +118,9 @@ b) 6
 
 c) 18
 
-d) 24
+d) 24 [X]
+
+Solução: O código acima utiliza os métodos `map`, `filter` e `reduce` para transformar, filtrar e reduzir os elementos do array `numeros`. Primeiramente, o método `map` multiplica cada elemento por 2, resultando em `[2, 4, 6, 8, 10]`. Em seguida, o método `filter` filtra os elementos maiores que 5, resultando em `[6, 8, 10]`. Por fim, o método `reduce` soma os elementos do array resultante, resultando em 24.
 
 ---
 
@@ -128,9 +136,11 @@ a) ["banana", "maçã", "uva", "abacaxi", "manga", "laranja"]
 
 b) ["banana", "abacaxi", "manga"]
 
-c) ["banana", "abacaxi", "manga", "laranja"]
+c) ["banana", "abacaxi", "manga", "laranja"] [X]
 
 d) ["banana", "maçã", "uva", "abacaxi", "manga"]
+
+Solucão: O método `splice` remove elementos de um array e, se necessário, adiciona novos elementos no lugar dos removidos. No código acima, o método `splice(1, 2, "abacaxi", "manga")` remove os elementos "maçã" e "uva" (a partir do índice 1, removendo 2 elementos) e adiciona "abacaxi" e "manga" no lugar. Portanto, o array resultante será `["banana", "abacaxi", "manga", "laranja"]`.
 
 ---
 
@@ -141,11 +151,15 @@ II. Em JavaScript, a herança é implementada através da palavra-chave `extends
 
 a) As duas afirmações são verdadeiras, e a segunda justifica a primeira.
 
-b) As duas afirmações são verdadeiras, mas a segunda não justifica a primeira.
+b) As duas afirmações são verdadeiras, mas a segunda não justifica a primeira. [X]
 
 c) A primeira afirmação é verdadeira, e a segunda é falsa.
 
 d) A primeira afirmação é falsa, e a segunda é verdadeira.
+
+Solução: A primeira afirmação é verdadeira. A herança em JavaScript é utilizada para compartilhar métodos e propriedades entre classes, permitindo que uma classe herde os métodos de outra sem a necessidade de repetir código. A segunda afirmação também é verdadeira. Em JavaScript, a herança é implementada através da palavra-chave `extends`, que permite que uma classe filha herde de uma classe pai.
+
+Sobre a justificativa, a alternativa correta é discutível. Olhando para a definição da palavra justificar, que é "Demonstrar, provar, tornar legítimo, verdadeiro; dar razão a;", a palavra `extends` não justifica a primeira afirmação, a palavra por si só não demonstra o conceito ou o torna verdadeiro, é apenas uma palavra-chave que implementa a funcionalidade de herança e remete a ideia de extensão.
 
 ---
 
@@ -182,13 +196,15 @@ III) O código não funciona corretamente, pois Funcionario não pode herdar de 
 
 Quais das seguintes afirmações são verdadeiras sobre o código acima?
 
-a) I e II são verdadeiras.
+a) I e II são verdadeiras. [X]
 
 b) I, II e III são verdadeiras.
 
 c) Apenas II é verdadeira.
 
 d) Apenas I é verdadeira.
+
+Solucão: A alternativa correta é a letra `a`. A afirmação I é verdadeira, pois a classe Funcionario herda de Pessoa e pode acessar os atributos nome e idade diretamente. A afirmação II também é verdadeira, pois o método `apresentar()` da classe Funcionario sobrepõe o método `apresentar()` da classe Pessoa, mas chama o método da classe pai usando `super`. A afirmação III é falsa, pois o código funciona corretamente e Funcionario pode herdar de Pessoa como uma classe em JavaScript.
 
 ---
 
@@ -204,6 +220,8 @@ b) A asserção é verdadeira e a razão é falsa.
 c) A asserção é verdadeira e a razão é verdadeira, mas a razão não explica a asserção.
 
 d) A asserção é verdadeira e a razão é verdadeira, e a razão explica a asserção.
+
+Solucão: A alternativa correta é a letra `b`. A asserção é verdadeira, pois o conceito de polimorfismo em Programação Orientada a Objetos permite que objetos de diferentes tipos respondam à mesma mensagem de maneiras diferentes. No entanto, a razão é falsa, pois em JavaScript, o polimorfismo não é implementado utilizando o método de sobrecarga de métodos em uma classe. Em JavaScript, o polimorfismo é implementado através da capacidade de um objeto de uma classe filha substituir um método de uma classe pai, permitindo que diferentes objetos respondam à mesma mensagem de maneiras diferentes.
 
 ---
 
@@ -221,6 +239,25 @@ function somaArray(numeros) {
 console.log(somaArray([1, 2, 3, 4]));
 ```
 
+```javascript
+function somaArray(numeros) {
+  // Declara e inicializa a variável 'soma' com 0 para acumular o resultado
+  let soma = 0;
+
+  // Usa 'let' para declarar 'i' no escopo do loop e corrige 'size' para 'length'
+  for (let i = 0; i < numeros.length; i++) {
+    // Incrementa 'soma' com o dobro do elemento atual, em vez de sobrescrevê-la
+    soma += 2 * numeros[i];
+  }
+
+  // Retorna o valor acumulado da soma
+  return soma;
+}
+
+// Testa a função com o array [1, 2, 3, 4], que deve retornar 20 (2*1 + 2*2 + 2*3 + 2*4)
+console.log(somaArray([1, 2, 3, 4])); // Saída: 20
+```
+
 ---
 
 10. Crie um exemplo prático no qual você tenha duas classes:
@@ -229,3 +266,43 @@ console.log(somaArray([1, 2, 3, 4]));
 - Uma classe `Livro` que herda de `Produto` e modifica o método `calcularDesconto()`, aplicando um desconto de 20% no preço dos livros.
 
 Explique como funciona a herança nesse contexto e como você implementaria a modificação do método na classe `Livro`.
+
+```javascript
+// Classe base Produto
+class Produto {
+  constructor(nome, preco) {
+    this.nome = nome; // Atributo para o nome do produto
+    this.preco = preco; // Atributo para o preço do produto
+  }
+
+  // Método para calcular desconto fixo de 10%
+  calcularDesconto() {
+    const desconto = this.preco * 0.1; // 10% do preço
+    return this.preco - desconto; // Retorna o preço com desconto
+  }
+}
+
+// Classe Livro que herda de Produto
+class Livro extends Produto {
+  constructor(nome, preco) {
+    super(nome, preco); // Chama o construtor da classe pai para inicializar nome e preco
+  }
+
+  // Sobrescreve o método calcularDesconto para aplicar 20% de desconto
+  calcularDesconto() {
+    const desconto = this.preco * 0.2; // 20% do preço
+    return this.preco - desconto; // Retorna o preço com desconto
+  }
+}
+
+// Testando as classes
+const produtoGenerico = new Produto("Caneta", 10);
+console.log(`Produto: ${produtoGenerico.nome}`);
+console.log(`Preço com desconto: R$ ${produtoGenerico.calcularDesconto()}`); // 10% de desconto
+
+const livro = new Livro("JavaScript Básico", 50);
+console.log(`Livro: ${livro.nome}`);
+console.log(`Preço com desconto: R$ ${livro.calcularDesconto()}`); // 20% de desconto
+```
+
+A herança nesse contexto permite que a classe `Livro` herde os atributos e métodos da classe `Produto`, evitando a repetição de código. Ao chamar `super(nome, preco)` no construtor da classe `Livro`, os atributos `nome` e `preco` são inicializados pela classe pai `Produto`. A modificação do método `calcularDesconto()` na classe `Livro` é feita sobrescrevendo o método original da classe `Produto`, permitindo que a classe `Livro` aplique um desconto de 20% em vez de 10%.
