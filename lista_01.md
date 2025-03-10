@@ -215,7 +215,7 @@ Solucão: A alternativa correta é a letra `a`. A afirmação I é verdadeira, p
 
 a) A asserção é falsa e a razão é verdadeira.
 
-b) A asserção é verdadeira e a razão é falsa.
+b) A asserção é verdadeira e a razão é falsa. [X]
 
 c) A asserção é verdadeira e a razão é verdadeira, mas a razão não explica a asserção.
 
@@ -239,6 +239,7 @@ function somaArray(numeros) {
 console.log(somaArray([1, 2, 3, 4]));
 ```
 
+Solução: 
 ```javascript
 function somaArray(numeros) {
   // Declara e inicializa a variável 'soma' com 0 para acumular o resultado
@@ -267,6 +268,7 @@ console.log(somaArray([1, 2, 3, 4])); // Saída: 20
 
 Explique como funciona a herança nesse contexto e como você implementaria a modificação do método na classe `Livro`.
 
+Solução: 
 ```javascript
 // Classe base Produto
 class Produto {
